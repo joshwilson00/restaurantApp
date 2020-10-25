@@ -1,0 +1,23 @@
+<article>
+    <div class="menus">
+        <small>Menu</small>
+        <form action="/restaurants/{{restaurant.id}}/menus/{{menu.id}}/edit" method="POST">
+            <label for="title">Title: </label>
+            <input type="text" name="title" id="title" value="{{menu.title}}">
+            <button type="submit">Save changes</button>
+        </form>
+        <a href="./delete"><button>Delete</button></a>
+        <a href="/restaurants/{{restaurant.id}}/menus/{{menu.id}}/addItem"><button>Add new item.</button></a>
+        <h5>Click on an item to edit it.</h5>
+        <section>
+            {{#each menu.items}}
+            <div class="card black item">
+                <a href="./items/{{this.id}}/edit">
+                    <p>{{this.name}}</p>
+                </a> &nbsp;<a href="./items/{{this.id}}/delete" class="inline"><span><i class="fa fa-remove" style="color:red"></i></span></a>
+            </div>
+            {{/each}}
+        </section>
+    </div>
+
+</article>

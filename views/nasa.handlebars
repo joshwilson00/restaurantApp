@@ -1,0 +1,13 @@
+
+<title>{{data.title}}</title>
+<h1 id="title">Random NASA data!</h1>
+<hr>
+<main class='nasa'>
+    <small>{{data.date}}</small>
+    <p>Information: {{data.explanation}}</p>
+    {{#if isImage}}
+    <img class='nasaIMG' src="{{data.hdurl}}" alt="{{data.title}}">
+    {{else}}
+    <p>Video Link: <a href="{{data.url}}">HERE</a></p>
+    {{/if}}
+</main>

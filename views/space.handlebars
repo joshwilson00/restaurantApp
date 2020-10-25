@@ -1,0 +1,9 @@
+<title>Who's in Space?</title>
+<h3 id="title">Total number of people in space: {{number}}</h3>
+<ul class='list'>
+    {{#each people}}
+    <li><strong>Name:</strong> {{this.name}}</li>
+    <li><strong>Currently on:</strong> {{this.craft}}</li>
+    <br>
+    {{/each}}
+</ul>

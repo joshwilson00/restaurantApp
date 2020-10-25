@@ -1,0 +1,175 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+nav li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+img {
+  margin: auto;
+  display: block;
+  padding: 0.5rem;
+}
+.row > img {
+  width: 25%;
+  padding: 0.5rem;
+}
+.row > p {
+  width: 73%;
+  padding-right: 0.5rem;
+}
+
+h4 {
+  padding: 0.5rem;
+}
+
+.nasa {
+  padding: 1rem;
+}
+
+.nasa > img {
+  max-width: 720px;
+  max-height: 720px;
+}
+.nasa > p {
+  font-size: 16px;
+}
+
+#title {
+  margin: 1rem;
+}
+
+.list {
+  margin: 1rem;
+  text-decoration: none;
+  list-style-type: none;
+}
+section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: none;
+  padding: 1rem;
+}
+
+.card h3, .card p, .card small, .card i, .image h1 {
+  color:white;
+  text-shadow: 1px 1px 25px black;
+}
+.menus, .title {
+  padding-left: .5rem;
+}
+.title {
+  padding-top: .5rem;
+}
+.items {
+  padding: 1rem;
+}
+
+.card {
+  height: 16rem;
+  margin-bottom: 1rem;
+  background-size: cover;
+  background-position: center center;
+  padding: 1rem;
+  transition: all .2s ease-in-out; 
+}
+
+a{
+  text-decoration: none;
+}
+  
+.card:hover { 
+  transform: scale(1.05); 
+}
+.menus > a {
+  text-decoration: none;
+  color: black;
+}
+.menu {
+  height: auto;
+  box-shadow: 0 0 3px #686767;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  transition: all .2s ease-in-out; 
+  color: black;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+.menu:hover{
+  box-shadow: 20px 20px 50px 15px grey;
+}
+.imgContainer {
+  width: 100%;
+  margin:0 auto;
+  padding: 1rem;
+}
+.image {
+  height: 14rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.image h1 {
+  position: absolute;
+  bottom: 1rem;
+  left: .5rem;
+}
+
+.item {
+  margin-bottom: 1rem;
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 2rem;
+}
+
+.black p{
+  color: black;
+  text-shadow: none;
+}
+@media screen and (min-width: 40em) {
+  section {
+    margin: 0;
+    gap: 1rem;
+    grid-template-columns: auto auto;
+  }
+  .image {
+    height: 20rem;
+  }
+  .card {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 60em) {
+  section {
+    grid-template-columns: auto auto auto;
+  }
+  .imgContainer {
+    width: 75%;
+  }
+}

@@ -1,0 +1,9 @@
+<section>
+    <form action="/restaurants/{{restaurant.id}}/edit" method="POST">
+        <label for="name">Restaurant Name</label>
+        <input type="text" name="name" value="{{restaurant.name}}">
+        <label for="imgURL">Image URL</label>
+        <input type="url" name="imgURL" value="{{restaurant.image}}">
+        <button type="submit">Edit</button>
+    </form>
+</section>

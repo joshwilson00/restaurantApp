@@ -1,0 +1,31 @@
+<div class="imgContainer">
+    <div class="image" style="background-image: url({{restaurant.image}});">
+        <h1>{{restaurant.name}} &nbsp; <a href="/restaurants/{{restaurant.id}}/edit"><i class="fa fa-edit" style="color: white;"></i></a> &nbsp; <a href="/restaurants/{{restaurant.id}}/delete"><i class="fa fa-remove" style="color:red"></i></a></h1> 
+    </div>
+</div>
+<section>
+    {{#each restaurant.menus}}
+    <a href="/restaurants/{{this.restaurantId}}/menus/{{this.id}}/edit">
+        <article class="menu">
+            <div class="title"><strong>{{this.title}}</strong></div>
+            <div class="items">
+                <dl>
+                    <small>Items</small>
+                    {{#each this.items}}
+                        <dt>{{this.name}}</dt>
+                        <dd>£{{this.price}}</dd>
+                    {{/each}}               
+                </dl>
+            </div>
+        </article>
+    </a>
+    {{/each}}
+    <article class="menu">
+        <div class="title"><strong>Add menu</strong></div>
+        <form action="/restaurants/{{restaurant.id}}/menus/add" method="POST">
+            <label for="title"> Enter title</label>
+            <input type="text" name="title" id="title" placeholder="Title">
+            <button type="submit">Add</button>
+        </form>
+    </article>
+</section>
